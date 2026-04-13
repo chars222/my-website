@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlos Gutierrez | Arquitecto de Software & IA</title>
+    <meta name="description" content="Website personal y portafolio de Carlos Gutierrez, Arquitecto de Soluciones IA.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Librería html2pdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+
+        /* Clases para la exportación a PDF */
+        .pdf-mode {
+            width: 800px !important;
+            max-width: 800px !important;
+            margin: 0 auto !important;
+            padding: 40px !important;
+            background-color: #f8fafc !important;
+        }
+        .pdf-mode #download-section {
+            display: none !important;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-200 selection:text-blue-900 min-h-screen">
+
+    <!-- Navegación Sticky -->
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-slate-100 transition-all">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-sm">CG</div>
+                    <span class="font-bold text-slate-900 hidden sm:block">Carlos Gutierrez</span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                    <a href="#proyectos" class="hover:text-blue-600 transition-colors">Proyectos</a>
+                    <a href="#experiencia" class="hover:text-blue-600 transition-colors">Experiencia</a>
+                    <a href="#habilidades" class="hover:text-blue-600 transition-colors">Habilidades</a>
+                </div>
+                <div>
+                    <!-- Aquí puedes poner el link al PDF que ya descargaste -->
+                    <a href="CV.pdf" target="_blank" class="bg-slate-900 hover:bg-blue-600 text-white text-sm font-medium py-2 px-5 rounded-full transition-colors flex items-center gap-2">
+                        <i data-lucide="file-text" class="w-4 h-4"></i> CV PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-12">
+        <!-- Hero Section -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-20 fade-in-up">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="flex-1 space-y-6 text-center md:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-sm font-medium">
+                        <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+                        Disponible para nuevos retos
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                        Arquitecto de Software & <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Especialista en IA</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 max-w-2xl mx-auto md:mx-0 leading-relaxed">
+                        Con más de 9 años de experiencia diseñando ecosistemas escalables. Transformo procesos empresariales complejos y arquitecturas bancarias mediante la automatización avanzada y el desarrollo de Agentes de Inteligencia Artificial.
+                    </p>
+                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-4">
+                        <a href="#proyectos" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all shadow-lg hover:shadow-blue-500/30">
+                            Ver mis proyectos
+                        </a>
+                        <div class="flex gap-3">
+                            <a href="https://linkedin.com/in/carlos-gutierrez-caballero-1934a2174" target="_blank" class="p-3 bg-white border border-slate-200 rounded-xl hover:border-blue-300 hover:text-blue-600 transition-all">
+                                <i data-lucide="linkedin" class="w-5 h-5"></i>
+                            </a>
+                            <a href="mailto:carlos.a.gutierrezcaballero@gmail.com" class="p-3 bg-white border border-slate-200 rounded-xl hover:border-blue-300 hover:text-blue-600 transition-all">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Decoración Visual Hero / FOTO DE PERFIL -->
+                <div class="hidden md:block w-1/3 relative">
+                    <!-- Círculos decorativos de fondo (brillan detrás de la foto) -->
+                    <div class="absolute top-4 -right-8 w-40 h-40 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob z-0"></div>
+                    <div class="absolute -bottom-8 -left-8 w-40 h-40 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob animation-delay-2000 z-0"></div>
+                    
+                    <!-- Contenedor de la foto -->
+                    <div class="aspect-square rounded-3xl border-4 border-white shadow-2xl overflow-hidden relative z-10 bg-slate-100">
+                        <!-- REEMPLAZA EL SRC CON LA URL DE TU FOTO DE PERFIL -->
+                        <img src="perfil2.webp" alt="Carlos Gutierrez" class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyectos (Portafolio) -->
+        <section id="proyectos" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 fade-in-up delay-100 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-slate-900 mb-2">Proyectos Destacados</h2>
+            <p class="text-slate-500 mb-10">Aplicaciones End-to-End desarrolladas para optimizar negocios y ventas.</p>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- Proyecto 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition-all group flex flex-col">
+                    <div class="h-56 bg-slate-100 relative overflow-hidden flex items-center justify-center">
+                        <div class="text-slate-400 text-sm font-medium flex flex-col items-center gap-2">
+                            <i data-lucide="image" class="w-8 h-8"></i>
+                            <img src="POS.jpeg"/>
+                        </div>
+                        <div class="absolute inset-0 bg-blue-900/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">SaaS E-commerce & Agente IA</h3>
+                        <p class="text-slate-600 text-sm mb-6 flex-grow leading-relaxed">
+                            Plataforma integral que sincroniza un E-commerce (React) con un POS (Node.js/PostgreSQL) y una App PWA para el control de inventarios. Destaca por un Agente de IA (n8n + Groq) que interactúa con clientes, resuelve dudas de stock/tallas y aplica técnicas de persuasión.
+                        </p>
+                        
+                        <div class="flex items-center gap-2 mb-6">
+                            <span class="bg-emerald-50 text-emerald-700 border border-emerald-200 px-2.5 py-1 rounded-md text-[11px] font-bold">
+                                🚀 Automatizó el 90% del embudo
+                            </span>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md text-[11px] font-medium">React</span>
+                            <span class="px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md text-[11px] font-medium">Node.js</span>
+                            <span class="px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md text-[11px] font-medium">PostgreSQL</span>
+                            <span class="px-2.5 py-1 bg-blue-50 text-blue-700 rounded-md text-[11px] font-medium">n8n + Groq</span>
+                        </div>
+                        
+                        <a href="TU_LINK_AQUI" target="_blank" class="inline-flex items-center gap-2 text-blue-600 font-semibold text-sm hover:text-blue-800 transition-colors mt-auto">
+                            Ver Proyecto Online <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition-all group flex flex-col">
+                    <div class="h-56 bg-slate-100 relative overflow-hidden flex items-center justify-center">
+                        <div class="text-slate-400 text-sm font-medium flex flex-col items-center gap-2">
+                            <i data-lucide="image" class="w-8 h-8"></i>         
+						   <img src="affiliate-inteligence.webp"/>
+                        </div>
+                        <div class="absolute inset-0 bg-blue-900/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Affiliate Intelligence</h3>
+                        <p class="text-slate-600 text-sm mb-6 flex-grow leading-relaxed">
+                            Herramienta analítica de potencial para marketing de afiliados. Evalúa demanda, competencia y margen en LATAM generando un score de 0 a 100. Analiza comentarios usando agentes IA para descubrir "puntos de dolor" y diseñar ángulos de campañas.
+                        </p>
+
+                        <div class="flex items-center gap-2 mb-6">
+                            <span class="bg-emerald-50 text-emerald-700 border border-emerald-200 px-2.5 py-1 rounded-md text-[11px] font-bold">
+                                📊 Datos reales de Meta y YouTube
+                            </span>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md text-[11px] font-medium">Flask</span>
+                            <span class="px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md text-[11px] font-medium">Python</span>
+                            <span class="px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md text-[11px] font-medium">RapidAPI</span>
+                            <span class="px-2.5 py-1 bg-blue-50 text-blue-700 rounded-md text-[11px] font-medium">Gemini AI</span>
+                        </div>
+                        
+                        <a href="TU_LINK_AQUI" target="_blank" class="inline-flex items-center gap-2 text-blue-600 font-semibold text-sm hover:text-blue-800 transition-colors mt-auto">
+                            Ver Proyecto Online <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition-all group flex flex-col">
+                    <div class="h-56 bg-slate-100 relative overflow-hidden flex items-center justify-center">
+                        <div class="text-slate-400 text-sm font-medium flex flex-col items-center gap-2">
+                            <i data-lucide="image" class="w-8 h-8"></i>
+                             <img src="curso-jabones.webp"/>
+                        </div>
+                        <div class="absolute inset-0 bg-blue-900/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Embudo E-learning: Artesanías</h3>
+                        <p class="text-slate-600 text-sm mb-6 flex-grow leading-relaxed">
+                            Diseño y desarrollo de una Landing Page de alta conversión para la venta de cursos digitales de jabones artesanales. Enfoque integral en optimización de velocidad de carga, diseño UI/UX persuasivo (Copywriting visual) e integración de pasarela de pagos.
+                        </p>
+
+                        <div class="flex items-center gap-2 mb-6">
+                            <span class="bg-emerald-50 text-emerald-700 border border-emerald-200 px-2.5 py-1 rounded-md text-[11px] font-bold">
+                                🛒 Optimización de Conversión (CRO)
+                            </span>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md text-[11px] font-medium">Frontend</span>
+                            <span class="px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md text-[11px] font-medium">UI/UX Design</span>
+                            <span class="px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md text-[11px] font-medium">Web Performance</span>
+                            <span class="px-2.5 py-1 bg-blue-50 text-blue-700 rounded-md text-[11px] font-medium">Sales Funnel</span>
+                        </div>
+                        
+                        <a href="TU_LINK_AQUI" target="_blank" class="inline-flex items-center gap-2 text-blue-600 font-semibold text-sm hover:text-blue-800 transition-colors mt-auto">
+                            Ver Proyecto Online <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Proyecto 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-100 hover:shadow-xl hover:border-blue-200 transition-all group flex flex-col">
+                    <div class="h-56 bg-slate-100 relative overflow-hidden flex items-center justify-center">
+                        <div class="text-slate-400 text-sm font-medium flex flex-col items-center gap-2">
+                            <i data-lucide="image" class="w-8 h-8"></i>
+                             <img src="curso-iacanva.webp"/>
+                        </div>
+                        <div class="absolute inset-0 bg-blue-900/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    </div>
+                    
+                    <div class="p-8 flex flex-col flex-grow">
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Plataforma EdTech: IA para Docentes</h3>
+                        <p class="text-slate-600 text-sm mb-6 flex-grow leading-relaxed">
+                            Plataforma de aterrizaje (Landing Page) orientada a la capacitación docente. Estructuración técnica de un embudo de captación enfocado en un programa formativo integral sobre el uso de herramientas de Inteligencia Artificial y diseño (Canva) aplicados al aula.
+                        </p>
+
+                        <div class="flex items-center gap-2 mb-6">
+                            <span class="bg-emerald-50 text-emerald-700 border border-emerald-200 px-2.5 py-1 rounded-md text-[11px] font-bold">
+                                🎓 Captación B2C Educativa
+                            </span>
+                        </div>
+
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md text-[11px] font-medium">Frontend Responsive</span>
+                            <span class="px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md text-[11px] font-medium">Integración API</span>
+                            <span class="px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md text-[11px] font-medium">Accesibilidad Web</span>
+                        </div>
+                        
+                        <a href="TU_LINK_AQUI" target="_blank" class="inline-flex items-center gap-2 text-blue-600 font-semibold text-sm hover:text-blue-800 transition-colors mt-auto">
+                            Ver Proyecto Online <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Experiencia (Línea de tiempo) -->
+        <section id="experiencia" class="bg-white border-y border-slate-200 py-20 scroll-mt-10">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-slate-900 mb-2 text-center">Trayectoria Profesional</h2>
+                <p class="text-slate-500 mb-16 text-center">Más de 9 años liderando el desarrollo en entornos críticos.</p>
+
+                <div class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-200 before:to-transparent">
+
+                    <!-- Trabajo 1 -->
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-blue-600 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                            <i data-lucide="building-2" class="w-4 h-4"></i>
+                        </div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-slate-50 p-6 rounded-2xl border border-slate-100 shadow-sm">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-bold text-slate-900 text-lg">Banco de la Nación Argentina</h3>
+                                <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded">2023 - Act.</span>
+                            </div>
+                            <h4 class="text-sm font-medium text-slate-500 mb-4">Consultor Analista de Desarrollo de Software</h4>
+                            <ul class="text-sm text-slate-600 space-y-2 list-disc ml-4">
+                                <li><strong>Arquitectura Móvil:</strong> Liderazgo y diseño de APIs para integrar la app móvil con los procesos transaccionales críticos (transferencias interbancarias, pagos QR).</li>
+                                <li><strong>Agente IA (Core Bancario):</strong> Desarrollo de motor IA que traduce requerimientos a lógica Topaz, automatizando un <span class="font-semibold text-emerald-600">60%-70% del ciclo inicial</span>.</li>
+                                <li><strong>Notificaciones:</strong> Sistema asíncrono en Python/Colas para transacciones de tarjetas.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 2 -->
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-slate-800 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                            <i data-lucide="briefcase" class="w-4 h-4"></i>
+                        </div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-bold text-slate-900 text-lg">Banco Ganadero S.A.</h3>
+                                <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2 py-1 rounded">2020 - 2023</span>
+                            </div>
+                            <h4 class="text-sm font-medium text-slate-500 mb-4">Arquitecto de Software</h4>
+                            <ul class="text-sm text-slate-600 space-y-2 list-disc ml-4">
+                                <li>Diseño de arquitectura orientada a eventos con <strong>Apache Kafka y Kubernetes</strong> para devoluciones de ATMs. <span class="font-semibold text-emerald-600">Tiempo de respuesta bajó de 2 días a 25s.</span></li>
+                                <li>Microservicios biométricos anti-spoofing con <strong>AWS Rekognition</strong>.</li>
+                                <li>Arquitectura Kony Quantum y .Net Core para venta móvil de seguros.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 3 -->
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-slate-400 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                            <i data-lucide="code" class="w-4 h-4"></i>
+                        </div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-bold text-slate-900 text-lg">Grupo Sion</h3>
+                                <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2 py-1 rounded">2019 - 2020</span>
+                            </div>
+                            <h4 class="text-sm font-medium text-slate-500 mb-4">Desarrollador de Software</h4>
+                            <ul class="text-sm text-slate-600 space-y-2 list-disc ml-4">
+                                <li>Desarrollo de módulos comerciales y administrativos para ERP propio (.Net Core y Python).</li>
+                                <li>Implementación de <strong>CI/CD con Jenkins, Gitlab y Docker</strong> en servidores Ubuntu.</li>
+                                <li>Creación de billetera móvil corporativa usando React Native.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Trabajo 4 -->
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-slate-300 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                            <i data-lucide="database" class="w-4 h-4"></i>
+                        </div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="font-bold text-slate-900 text-lg">Cloudbit</h3>
+                                <span class="text-xs font-medium text-slate-500 bg-slate-100 px-2 py-1 rounded">2016 - 2019</span>
+                            </div>
+                            <h4 class="text-sm font-medium text-slate-500 mb-4">Desarrollador de Software</h4>
+                            <ul class="text-sm text-slate-600 space-y-2 list-disc ml-4">
+                                <li>Liderazgo de equipo para plataforma E-commerce con pasarelas Tigo Money / Pay-me.</li>
+                                <li>Integración de chatbots inteligentes con <strong>IBM Watson Assistant</strong>.</li>
+                                <li>Análisis de sentimiento (Watson NLP + API Facebook) para feedback de usuarios.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Habilidades (Stack) -->
+        <section id="habilidades" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 scroll-mt-10">
+            <div class="bg-slate-900 text-white rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
+                <!-- Efecto de brillo -->
+                <div class="absolute top-0 right-0 w-96 h-96 bg-blue-500 rounded-full mix-blend-screen filter blur-[100px] opacity-20 -mr-20 -mt-20 pointer-events-none"></div>
+                
+                <h2 class="text-3xl font-bold mb-10 flex items-center gap-3 relative z-10">
+                    <i data-lucide="cpu" class="w-8 h-8 text-blue-400"></i> Stack Tecnológico & Skills
+                </h2>
+                
+                <div class="grid md:grid-cols-3 gap-10 relative z-10">
+                    <!-- Columna 1 -->
+                    <div>
+                        <h4 class="text-sm font-semibold text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+                            <i data-lucide="bot" class="w-4 h-4"></i> Inteligencia Artificial
+                        </h4>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="px-3 py-1.5 bg-white/10 hover:bg-blue-500/30 transition-colors border border-white/5 rounded-lg text-sm font-medium backdrop-blur-sm cursor-default">Agentes LLM (Gemini, Groq)</span>
+                            <span class="px-3 py-1.5 bg-white/10 hover:bg-blue-500/30 transition-colors border border-white/5 rounded-lg text-sm font-medium backdrop-blur-sm cursor-default">n8n</span>
+                            <span class="px-3 py-1.5 bg-white/10 hover:bg-blue-500/30 transition-colors border border-white/5 rounded-lg text-sm font-medium backdrop-blur-sm cursor-default">Prompt Engineering</span>
+                            <span class="px-3 py-1.5 bg-white/10 hover:bg-blue-500/30 transition-colors border border-white/5 rounded-lg text-sm font-medium backdrop-blur-sm cursor-default">IBM Watson</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Columna 2 -->
+                    <div>
+                        <h4 class="text-sm font-semibold text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+                            <i data-lucide="server" class="w-4 h-4"></i> Arquitectura Backend
+                        </h4>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="px-3 py-1.5 bg-white/10 hover:bg-white/20 transition-colors border border-white/5 rounded-lg text-sm font-medium backdrop-blur-sm cursor-default">Python & Flask</span>
+                            <span class="px-3 py-1.5 bg-white/10 hover:bg-white/20 transition-colors border border-white/5 rounded-lg text-sm font-medium backdrop-blur-sm cursor-default">Node.js</span>
+                            <span class="px-3 py-1.5 bg-white/10 hover:bg-white/20 transition-colors border border-white/5 rounded-lg text-sm font-medium backdrop-blur-sm cursor-default">C# (.Net Core)</span>
+                            <span class="px-3 py-1.5 bg-white/10 hover:bg-white/20 transition-colors border border-white/5 rounded-lg text-sm font-medium backdrop-blur-sm cursor-default">Apache Kafka</span>
+                            <span class="px-3 py-1.5 bg-white/10 hover:bg-white/20 transition-colors border border-white/5 rounded-lg text-sm font-medium backdrop-blur-sm cursor-default">Microservicios</span>
+                            <span class="px-3 py-1.5 bg-white/10 hover:bg-white/20 transition-colors border border-white/5 rounded-lg text-sm font-medium backdrop-blur-sm cursor-default">API Gateway Kong</span>
+                        </div>
+                    </div>
+
+                    <!-- Columna 3 -->
+                    <div>
+                        <h4 class="text-sm font-semibold text-slate-400 uppercase tracking-widest mb-4 flex items-center gap-2">
+                            <i data-lucide="database" class="w-4 h-4"></i> Infra & Core
+                        </h4>
+                        <div class="flex flex-wrap gap-2.5">
+                            <span class="px-3 py-1.5 bg-white/10 hover:bg-white/20 transition-colors border border-white/5 rounded-lg text-sm font-medium backdrop-blur-sm cursor-default">Docker / K8s</span>
+                            <span class="px-3 py-1.5 bg-white/10 hover:bg-white/20 transition-colors border border-white/5 rounded-lg text-sm font-medium backdrop-blur-sm cursor-default">Jenkins CI/CD</span>
+                            <span class="px-3 py-1.5 bg-white/10 hover:bg-white/20 transition-colors border border-white/5 rounded-lg text-sm font-medium backdrop-blur-sm cursor-default">AWS</span>
+                            <span class="px-3 py-1.5 bg-white/10 hover:bg-white/20 transition-colors border border-white/5 rounded-lg text-sm font-medium backdrop-blur-sm cursor-default">Topaz (Core Bancario)</span>
+                            <span class="px-3 py-1.5 bg-white/10 hover:bg-white/20 transition-colors border border-white/5 rounded-lg text-sm font-medium backdrop-blur-sm cursor-default">SQL Server / Oracle</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-slate-500 text-sm">
+                © 2024 Carlos Gutierrez Caballero. 
+                <span class="block sm:inline mt-1 sm:mt-0">Ingeniero de Sistemas (UAGRM)</span>
+            </div>
+            <div class="flex gap-4">
+                <a href="https://linkedin.com/in/carlos-gutierrez-caballero-1934a2174" target="_blank" class="text-slate-400 hover:text-blue-600 transition-colors">
+                    <span class="sr-only">LinkedIn</span>
+                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                </a>
+                <a href="mailto:carlos.a.gutierrezcaballero@gmail.com" class="text-slate-400 hover:text-blue-600 transition-colors">
+                    <span class="sr-only">Email</span>
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
