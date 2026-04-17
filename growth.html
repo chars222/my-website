@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Rivera | Growth Partner B2B</title>
+    <meta name="description" content="Ayudamos a empresas B2B y SaaS a escalar su facturación mediante embudos de adquisición y automatización.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a3e635' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='13 2 3 14 12 14 11 22 21 10 12 10 13 2'/%3E%3C/svg%3E" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fuentes: Inter (Texto) y Space Grotesk (Títulos Tech/Modernos) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#09090b', // zinc-950
+                            card: '#18181b', // zinc-900
+                            neon: '#a3e635', // lime-400
+                            neonDark: '#65a30d', // lime-600
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .fade-in-up { animation: fadeInUp 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        
+        /* Efecto de ruido/grano moderno de fondo */
+        .bg-noise {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-zinc-300 antialiased selection:bg-brand-neon selection:text-brand-dark bg-noise">
+
+    <!-- Navegación Sticky -->
+    <nav class="fixed w-full bg-brand-dark/80 backdrop-blur-xl z-50 border-b border-white/10 transition-all">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <span class="font-display font-bold text-2xl tracking-tight text-white">Alex<span class="text-brand-neon">Rivera_</span></span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 text-sm font-medium text-zinc-400">
+                    <a href="#metodo" class="hover:text-white transition-colors">Método</a>
+                    <a href="#resultados" class="hover:text-white transition-colors">Resultados</a>
+                    <a href="#experiencia" class="hover:text-white transition-colors">Experiencia</a>
+                </div>
+                
+                <div>
+                    <!-- Botón CTA Neón -->
+                    <a href="#contacto" class="group relative inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-brand-dark bg-brand-neon rounded-sm overflow-hidden transition-all hover:scale-105">
+                        <span class="absolute w-0 h-0 transition-all duration-500 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56"></span>
+                        <span class="relative flex items-center gap-2">Auditoría Gratuita <i data-lucide="zap" class="w-4 h-4"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-12 overflow-hidden">
+        <!-- Hero Section -->
+        <section class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-20 fade-in-up">
+            <!-- Glow Effect Background -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-neon rounded-full mix-blend-screen filter blur-[150px] opacity-10 pointer-events-none z-0"></div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-12 relative z-10">
+                <!-- Texto Central -->
+                <div class="flex-1 space-y-8 text-center md:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 border border-brand-neon/30 bg-brand-neon/10 text-brand-neon text-xs font-bold uppercase tracking-widest rounded-full">
+                        <span class="w-2 h-2 rounded-full bg-brand-neon animate-pulse"></span>
+                        Aceptando 2 clientes este mes
+                    </div>
+                    
+                    <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1]">
+                        Escalamos tu SaaS B2B. <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-neon to-emerald-400">Sin excusas.</span>
+                    </h1>
+                    
+                    <p class="text-lg text-zinc-400 max-w-2xl mx-auto md:mx-0 leading-relaxed">
+                        No somos una "agencia de marketing" tradicional. Somos tu socio de crecimiento. Implementamos sistemas de adquisición <strong>Outbound automatizados y Paid Ads hiper-segmentados</strong> para predecir tu facturación.
+                    </p>
+                    
+                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-4">
+                        <a href="#contacto" class="bg-brand-neon hover:bg-white text-brand-dark font-bold py-4 px-8 rounded-sm transition-all shadow-[0_0_20px_rgba(163,230,53,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] text-sm uppercase tracking-wide flex items-center gap-2">
+                            Quiero más clientes B2B <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+
+                    <!-- Métricas Hero -->
+                    <div class="grid grid-cols-3 gap-4 pt-10 mt-10 border-t border-white/10 text-left">
+                        <div>
+                            <p class="font-display text-3xl font-bold text-white">+$12M</p>
+                            <p class="text-xs text-zinc-500 uppercase tracking-widest font-semibold mt-1">Nuevo Pipeline</p>
+                        </div>
+                        <div>
+                            <p class="font-display text-3xl font-bold text-white">45+</p>
+                            <p class="text-xs text-zinc-500 uppercase tracking-widest font-semibold mt-1">SaaS Escalados</p>
+                        </div>
+                        <div>
+                            <p class="font-display text-3xl font-bold text-brand-neon">3.2x</p>
+                            <p class="text-xs text-zinc-500 uppercase tracking-widest font-semibold mt-1">ROI Promedio</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FOTO DE PERFIL (Moderna/Desafiante) -->
+                <div class="w-full max-w-[320px] md:max-w-none md:w-[450px] mx-auto mt-8 md:mt-0 relative">
+                    <!-- Decoración geométrica -->
+                    <div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-brand-neon z-20"></div>
+                    <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-brand-neon z-20"></div>
+                    
+                    <!-- Foto Profesional -->
+                    <div class="relative z-10 bg-brand-card shadow-2xl overflow-hidden border border-white/10 group">
+                        <!-- URL de Unsplash (Estilo joven, tecnológico, seguro) -->
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Alex Rivera" class="w-full h-auto object-cover aspect-[4/5] filter grayscale group-hover:grayscale-0 transition-all duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: El Método (Servicios disfrazados de sistema) -->
+        <section id="metodo" class="py-24 border-y border-white/5 bg-brand-card/30 scroll-mt-20 fade-in-up delay-100">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-brand-neon font-bold tracking-widest uppercase text-sm">Nuestro Motor de Crecimiento</span>
+                    <h2 class="font-display text-3xl md:text-5xl font-bold mt-4 text-white">No adivinamos. Iteramos basados en data dura.</h2>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Pilares -->
+                    <div class="bg-brand-dark border border-white/10 p-8 rounded-xl hover:border-brand-neon/50 transition-all group">
+                        <div class="w-12 h-12 bg-brand-neon/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-neon transition-colors">
+                            <i data-lucide="mail" class="w-6 h-6 text-brand-neon group-hover:text-brand-dark transition-colors"></i>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-3 text-white">Outbound B2B Predictivo</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                            Construimos máquinas de prospección en frío. Usamos Scraping avanzado y personalización con IA para agendar +20 llamadas calificadas al mes por representante.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-[10px] font-bold uppercase tracking-wider border border-white/20 px-2 py-1 rounded text-zinc-300">Cold Email</span>
+                            <span class="text-[10px] font-bold uppercase tracking-wider border border-white/20 px-2 py-1 rounded text-zinc-300">LinkedIn Automation</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-brand-dark border border-white/10 p-8 rounded-xl hover:border-brand-neon/50 transition-all group">
+                        <div class="w-12 h-12 bg-brand-neon/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-neon transition-colors">
+                            <i data-lucide="mouse-pointer-click" class="w-6 h-6 text-brand-neon group-hover:text-brand-dark transition-colors"></i>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-3 text-white">Performance Ads & CRO</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                            Compramos tráfico con intención. Optimizamos tus landing pages (CRO) para que cada dólar invertido en pauta publicitaria se multiplique en el pipeline de ventas.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-[10px] font-bold uppercase tracking-wider border border-white/20 px-2 py-1 rounded text-zinc-300">Google Ads</span>
+                            <span class="text-[10px] font-bold uppercase tracking-wider border border-white/20 px-2 py-1 rounded text-zinc-300">A/B Testing</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-brand-dark border border-white/10 p-8 rounded-xl hover:border-brand-neon/50 transition-all group">
+                        <div class="w-12 h-12 bg-brand-neon/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-neon transition-colors">
+                            <i data-lucide="database" class="w-6 h-6 text-brand-neon group-hover:text-brand-dark transition-colors"></i>
+                        </div>
+                        <h3 class="font-display text-xl font-bold mb-3 text-white">RevOps & Retención</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                            Alineamos tus equipos de Marketing, Ventas y Customer Success en un solo dashboard (HubSpot/Salesforce) para evitar fricciones y reducir la tasa de abandono (Churn).
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-[10px] font-bold uppercase tracking-wider border border-white/20 px-2 py-1 rounded text-zinc-300">HubSpot CRM</span>
+                            <span class="text-[10px] font-bold uppercase tracking-wider border border-white/20 px-2 py-1 rounded text-zinc-300">Data Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRAYECTORIA / CASOS DE ÉXITO -->
+        <section id="experiencia" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 scroll-mt-20">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-4">No soy un teórico. He estado en las trincheras.</h2>
+                <p class="text-zinc-400 max-w-xl mx-auto">Historial comprobado escalando startups desde etapa semilla hasta Series B y liderando equipos de alto rendimiento.</p>
+            </div>
+
+            <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-px before:bg-white/10">
+
+                <!-- Experiencia 1 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-brand-dark bg-brand-neon text-brand-dark shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <i data-lucide="rocket" class="w-4 h-4"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-brand-card p-6 md:p-8 rounded-xl border border-white/5 hover:border-brand-neon/30 transition-all">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-3 gap-2">
+                            <h3 class="font-display font-bold text-white text-xl">Founder & Growth Partner</h3>
+                            <span class="text-[10px] font-bold tracking-widest text-brand-neon border border-brand-neon/30 bg-brand-neon/10 px-2 py-1 rounded">2021 - Actualidad</span>
+                        </div>
+                        <h4 class="text-sm font-medium text-zinc-400 mb-4">ScaleVelocity Agency</h4>
+                        <p class="text-sm text-zinc-400 leading-relaxed">
+                            Agencia boutique de adquisición B2B. Ayudamos a empresas tecnológicas a pasar de depender de referidos a tener un sistema predecible de generación de leads y cierre de ventas.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Experiencia 2 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-brand-dark bg-zinc-800 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <i data-lucide="trending-up" class="w-4 h-4"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-brand-card p-6 md:p-8 rounded-xl border border-white/5 hover:border-brand-neon/30 transition-all">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-3 gap-2">
+                            <h3 class="font-display font-bold text-white text-xl">Head of Growth</h3>
+                            <span class="text-[10px] font-bold tracking-widest text-zinc-400 border border-white/10 bg-white/5 px-2 py-1 rounded">2018 - 2021</span>
+                        </div>
+                        <h4 class="text-sm font-medium text-zinc-400 mb-4">PayFlow Tech (SaaS Ficticio)</h4>
+                        <p class="text-sm text-zinc-400 leading-relaxed">
+                            Lideré el equipo de Marketing y Ventas (15+ personas). <span class="text-brand-neon font-semibold">Escalamos el ARR (Ingreso Recurrente Anual) de \$1.2M a \$10M</span> en 36 meses. Estructuración completa del CRM y Playbooks de ventas.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Experiencia 3 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-brand-dark bg-zinc-800 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <i data-lucide="target" class="w-4 h-4"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-brand-card p-6 md:p-8 rounded-xl border border-white/5 hover:border-brand-neon/30 transition-all">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-3 gap-2">
+                            <h3 class="font-display font-bold text-white text-xl">Senior Performance Marketer</h3>
+                            <span class="text-[10px] font-bold tracking-widest text-zinc-400 border border-white/10 bg-white/5 px-2 py-1 rounded">2015 - 2018</span>
+                        </div>
+                        <h4 class="text-sm font-medium text-zinc-400 mb-4">OmniMedia Digital</h4>
+                        <p class="text-sm text-zinc-400 leading-relaxed">
+                            Gestión de presupuestos publicitarios superiores a \$250k/mes en Google Ads y Meta Ads para clientes del sector Fintech y E-commerce. Optimización rigurosa de Costo de Adquisición (CAC).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Experiencia 4 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-brand-dark bg-zinc-800 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <i data-lucide="bar-chart" class="w-4 h-4"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-brand-card p-6 md:p-8 rounded-xl border border-white/5 hover:border-brand-neon/30 transition-all">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-3 gap-2">
+                            <h3 class="font-display font-bold text-white text-xl">Growth Data Analyst</h3>
+                            <span class="text-[10px] font-bold tracking-widest text-zinc-400 border border-white/10 bg-white/5 px-2 py-1 rounded">2013 - 2015</span>
+                        </div>
+                        <h4 class="text-sm font-medium text-zinc-400 mb-4">ConvertMetrics (SaaS Ficticio)</h4>
+                        <p class="text-sm text-zinc-400 leading-relaxed">
+                            Implementación de infraestructura analítica avanzada (Mixpanel, Segment) para mapear el ciclo de vida del usuario. Descubrimiento de fricciones en el onboarding que incrementaron la activación de usuarios Freemium a Pago en un 22%.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Experiencia 5 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-brand-dark bg-zinc-800 text-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <i data-lucide="phone" class="w-4 h-4"></i>
+                    </div>
+                    <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-brand-card p-6 md:p-8 rounded-xl border border-white/5 hover:border-brand-neon/30 transition-all">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-3 gap-2">
+                            <h3 class="font-display font-bold text-white text-xl">B2B Sales Representative (SDR)</h3>
+                            <span class="text-[10px] font-bold tracking-widest text-zinc-400 border border-white/10 bg-white/5 px-2 py-1 rounded">2011 - 2013</span>
+                        </div>
+                        <h4 class="text-sm font-medium text-zinc-400 mb-4">TechForce Solutions</h4>
+                        <p class="text-sm text-zinc-400 leading-relaxed">
+                            "Donde empezó todo". Prospección B2B en las trincheras (Cold Calling & Emailing). Cerrando cuentas corporativas y superando la cuota de ventas al 120%. Aquí entendí que el mejor software no sobrevive sin un motor predecible de adquisición.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA FINAL (Agresivo / Neón) -->
+        <section id="contacto" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+            <div class="bg-brand-neon p-1 md:p-1 rounded-2xl shadow-[0_0_50px_rgba(163,230,53,0.15)] relative overflow-hidden group">
+                <!-- Inner Dark Container to create the border effect -->
+                <div class="bg-brand-dark p-10 md:p-16 rounded-xl text-center text-white w-full h-full relative z-10">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-brand-neon rounded-full mix-blend-screen filter blur-[120px] opacity-20 group-hover:opacity-40 transition-opacity duration-700"></div>
+                    
+                    <h2 class="font-display text-3xl md:text-5xl font-bold mb-6">Dejemos de hablar y veamos tu embudo.</h2>
+                    <p class="text-zinc-400 text-lg mb-10 max-w-2xl mx-auto">
+                        Agenda una sesión de 30 minutos. Mapearemos tu sistema de adquisición actual y te daré 3 acciones concretas (Action Items) para aumentar tus reuniones calificadas la próxima semana. <span class="text-white font-bold">Si no te aporto valor, te pago el café.</span>
+                    </p>
+                    
+                    <a href="mailto:alex@scalevelocity.com?subject=Solicitud de Auditoría de Growth" class="inline-flex items-center gap-2 bg-brand-neon text-brand-dark hover:bg-white font-bold text-sm uppercase tracking-widest py-5 px-10 rounded-sm transition-all shadow-xl hover:scale-105">
+                        Agendar Sesión Táctica <i data-lucide="arrow-up-right" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/5 py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-zinc-500 text-sm text-center md:text-left">
+                <span class="font-display font-bold text-lg text-white mr-4">AlexRivera_</span> 
+                © 2024 ScaleVelocity. All rights reserved.
+            </div>
+            <div class="flex gap-6">
+                <a href="#" class="text-zinc-500 hover:text-brand-neon transition-colors"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                <a href="#" class="text-zinc-500 hover:text-brand-neon transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

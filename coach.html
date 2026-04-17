@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Elena Rostova | Executive Performance Coach</title>
+    <meta name="description" content="Biohacking, neurociencia y psicología de alto rendimiento para CEOs y líderes fundadores.">
+    
+    <!-- Favicon Vectorial (Hoja Orgánica / Loto minimalista) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23047857' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 22c4-4 8-9 8-14a8 8 0 1 0-16 0c0 5 4 10 8 14z'/%3E%3C/svg%3E" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fuentes: Lato (Cuerpo, limpia) y Cormorant Garamond (Titulares, elegante y orgánica) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            light: '#fafaf9', // stone-50 (Crema muy suave)
+                            dark: '#292524', // stone-800 (Gris tierra)
+                            primary: '#047857', // emerald-700 (Verde Salvia/Oliva)
+                            accent: '#e7e5e4', // stone-200 (Arena)
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .fade-in-up { animation: fadeInUp 1s ease-out forwards; opacity: 0; transform: translateY(20px); }
+        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+        .delay-100 { animation-delay: 150ms; }
+        .delay-200 { animation-delay: 300ms; }
+        .delay-300 { animation-delay: 450ms; }
+        
+        /* Detalles redondeados y orgánicos */
+        .organic-shape {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+    </style>
+</head>
+<body class="bg-brand-light text-brand-dark antialiased selection:bg-brand-primary selection:text-white">
+
+    <!-- Navegación Sticky (Sutil y Transparente) -->
+    <nav class="fixed w-full bg-brand-light/90 backdrop-blur-md z-50 transition-all border-b border-brand-accent/50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <!-- Logo Tipográfico Orgánico -->
+                <div class="flex items-center gap-2">
+                    <span class="font-serif font-semibold text-2xl tracking-widest text-brand-dark uppercase">Elena Rostova</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-10 text-sm font-medium tracking-widest uppercase text-stone-500">
+                    <a href="#filosofia" class="hover:text-brand-primary transition-colors">Filosofía</a>
+                    <a href="#resultados" class="hover:text-brand-primary transition-colors">Impacto</a>
+                    <a href="#experiencia" class="hover:text-brand-primary transition-colors">Trayectoria</a>
+                </div>
+                
+                <div>
+                    <!-- Botón CTA Suave -->
+                    <a href="#contacto" class="bg-brand-primary/10 text-brand-primary hover:bg-brand-primary hover:text-white text-xs uppercase tracking-widest font-bold py-3 px-6 rounded-full transition-all duration-500">
+                        Evaluación Inicial
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-24 pb-12 overflow-hidden">
+        <!-- Hero Section -->
+        <section class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24 fade-in-up">
+            <div class="flex flex-col-reverse md:flex-row items-center gap-16 md:gap-20">
+                <!-- Texto Central -->
+                <div class="flex-1 space-y-8 text-center md:text-left relative z-10">
+                    <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-medium text-brand-dark leading-[1.05]">
+                        Liderazgo sostenible desde <i class="text-brand-primary">adentro hacia afuera.</i>
+                    </h1>
+                    
+                    <p class="text-lg text-stone-600 max-w-lg mx-auto md:mx-0 leading-relaxed font-light">
+                        Combino neurociencia aplicada, psicología clínica y biohacking para ayudar a CEOs y fundadores a erradicar el burnout, recuperar su energía vital y tomar decisiones con absoluta claridad.
+                    </p>
+                    
+                    <div class="flex flex-wrap items-center justify-center md:justify-start gap-6 pt-6">
+                        <a href="#contacto" class="bg-brand-primary text-white font-medium py-4 px-8 rounded-full transition-all hover:shadow-lg hover:bg-emerald-800 text-sm tracking-wide">
+                            Comienza tu transformación
+                        </a>
+                        <a href="#resultados" class="text-stone-500 hover:text-brand-primary uppercase tracking-widest text-xs font-bold transition-colors">
+                            Ver metodología
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- FOTO DE PERFIL (Orgánica y Cálida) -->
+                <div class="w-full max-w-[300px] md:max-w-[400px] mx-auto relative">
+                    <!-- Elemento decorativo orgánico -->
+                    <div class="absolute inset-0 bg-brand-primary/10 organic-shape scale-110 -rotate-12 z-0"></div>
+                    <div class="absolute inset-0 bg-brand-accent/50 organic-shape scale-105 rotate-12 z-0"></div>
+                    
+                    <!-- Foto Profesional -->
+                    <div class="relative z-10 overflow-hidden organic-shape shadow-xl">
+                        <!-- URL de Unsplash (Mujer profesional, entorno sereno y luminoso) -->
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dra. Elena Rostova" class="w-full h-[450px] object-cover object-center filter contrast-100 brightness-105 transition-transform duration-1000 hover:scale-105">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: 5 Resultados / Métricas de Impacto Clínico -->
+        <section id="resultados" class="py-24 bg-white border-y border-brand-accent/40 scroll-mt-24 fade-in-up delay-100">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="font-serif text-4xl font-medium text-brand-dark mb-4">El impacto real del alto rendimiento.</h2>
+                    <p class="text-stone-500 font-light">Datos agregados de nuestros últimos 100 ejecutivos asesorados tras 6 meses de programa integral.</p>
+                </div>
+
+                <!-- Grid de 5 Resultados (3 arriba, 2 abajo) -->
+                <div class="flex flex-wrap justify-center gap-8">
+                    <!-- Resultado 1 -->
+                    <div class="bg-brand-light p-8 rounded-3xl border border-brand-accent/50 text-center w-full md:w-[30%] hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 mx-auto bg-brand-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i data-lucide="brain" class="w-6 h-6 text-brand-primary"></i>
+                        </div>
+                        <p class="font-serif text-5xl font-semibold text-brand-primary mb-2">94%</p>
+                        <h4 class="text-sm font-bold uppercase tracking-widest text-brand-dark mb-2">Reducción de Burnout</h4>
+                        <p class="text-xs text-stone-500 font-light">Disminución clínica de fatiga suprarrenal y niebla mental (brain fog).</p>
+                    </div>
+
+                    <!-- Resultado 2 -->
+                    <div class="bg-brand-light p-8 rounded-3xl border border-brand-accent/50 text-center w-full md:w-[30%] hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 mx-auto bg-brand-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i data-lucide="clock" class="w-6 h-6 text-brand-primary"></i>
+                        </div>
+                        <p class="font-serif text-5xl font-semibold text-brand-primary mb-2">+40h</p>
+                        <h4 class="text-sm font-bold uppercase tracking-widest text-brand-dark mb-2">Recuperadas al mes</h4>
+                        <p class="text-xs text-stone-500 font-light">Aumento en foco profundo y reducción de horas ineficientes de trabajo.</p>
+                    </div>
+
+                    <!-- Resultado 3 -->
+                    <div class="bg-brand-light p-8 rounded-3xl border border-brand-accent/50 text-center w-full md:w-[30%] hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 mx-auto bg-brand-primary/10 rounded-full flex items-center justify-center mb-4">
+                            <i data-lucide="users" class="w-6 h-6 text-brand-primary"></i>
+                        </div>
+                        <p class="font-serif text-5xl font-semibold text-brand-primary mb-2">3x</p>
+                        <h4 class="text-sm font-bold uppercase tracking-widest text-brand-dark mb-2">Retención de Equipos</h4>
+                        <p class="text-xs text-stone-500 font-light">Líderes regulados crean entornos psicológicamente más seguros.</p>
+                    </div>
+
+                    <!-- Resultado 4 -->
+                    <div class="bg-brand-light p-8 rounded-3xl border border-brand-accent/50 text-center w-full md:w-[46%] hover:shadow-md transition-shadow mt-4">
+                        <div class="flex items-center justify-center gap-4 mb-4">
+                            <i data-lucide="building" class="w-8 h-8 text-stone-400"></i>
+                        </div>
+                        <p class="font-serif text-4xl font-semibold text-brand-dark mb-2">150+ CEOs</p>
+                        <h4 class="text-sm font-bold uppercase tracking-widest text-stone-500">Ejecutivos Asesorados</h4>
+                    </div>
+
+                    <!-- Resultado 5 -->
+                    <div class="bg-brand-primary p-8 rounded-3xl text-center w-full md:w-[46%] shadow-lg mt-4 text-white">
+                        <div class="flex items-center justify-center gap-4 mb-4">
+                            <i data-lucide="shield-check" class="w-8 h-8 text-emerald-200"></i>
+                        </div>
+                        <p class="font-serif text-4xl font-semibold text-white mb-2">100%</p>
+                        <h4 class="text-sm font-bold uppercase tracking-widest text-emerald-100">Privacidad y Confidencialidad</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: Filosofía / Servicios B2B (Pilares) -->
+        <section id="filosofia" class="py-24 scroll-mt-20 fade-in-up delay-200">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-20">
+                    <h2 class="font-serif text-3xl md:text-4xl font-medium text-brand-dark mb-4">Mis tres pilares de intervención.</h2>
+                    <p class="text-stone-500 font-light text-lg">No trato los síntomas de tu estrés. Rediseñamos tu biología y psicología para sostener el peso de tu empresa.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-10">
+                    <!-- Pilar 1 -->
+                    <div class="bg-white p-10 rounded-[40px] shadow-sm border border-stone-100 hover:shadow-xl transition-all duration-500">
+                        <i data-lucide="dna" class="w-10 h-10 text-brand-primary mb-6"></i>
+                        <h3 class="font-serif text-2xl font-bold mb-4 text-brand-dark">Biohacking & Longevidad</h3>
+                        <p class="text-stone-500 text-sm leading-relaxed mb-6 font-light">
+                            Optimización de tus ritmos circadianos, nutrición neuro-enfocada y protocolos de recuperación celular. Tu cuerpo es la máquina que sostiene tu visión empresarial.
+                        </p>
+                        <ul class="text-sm text-stone-600 space-y-2 font-light">
+                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-primary"></div> Análisis de biomarcadores</li>
+                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-primary"></div> Protocolos de sueño profundo</li>
+                        </ul>
+                    </div>
+
+                    <!-- Pilar 2 -->
+                    <div class="bg-white p-10 rounded-[40px] shadow-sm border border-stone-100 hover:shadow-xl transition-all duration-500">
+                        <i data-lucide="compass" class="w-10 h-10 text-brand-primary mb-6"></i>
+                        <h3 class="font-serif text-2xl font-bold mb-4 text-brand-dark">Psicología de Liderazgo</h3>
+                        <p class="text-stone-500 text-sm leading-relaxed mb-6 font-light">
+                            Desmantelamiento del Síndrome del Impostor, manejo de la soledad del CEO y calibración de la toma de decisiones bajo extrema presión y estrés.
+                        </p>
+                        <ul class="text-sm text-stone-600 space-y-2 font-light">
+                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-primary"></div> Regulación del sistema nervioso</li>
+                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-primary"></div> Mindset de resiliencia radical</li>
+                        </ul>
+                    </div>
+
+                    <!-- Pilar 3 -->
+                    <div class="bg-white p-10 rounded-[40px] shadow-sm border border-stone-100 hover:shadow-xl transition-all duration-500">
+                        <i data-lucide="leaf" class="w-10 h-10 text-brand-primary mb-6"></i>
+                        <h3 class="font-serif text-2xl font-bold mb-4 text-brand-dark">Inmersión de Desconexión</h3>
+                        <p class="text-stone-500 text-sm leading-relaxed mb-6 font-light">
+                            Retiros privados intensivos de 3 a 5 días (1-a-1). Un "reset" cognitivo y biológico total lejos del ruido corporativo para redefinir tu propósito y estrategia.
+                        </p>
+                        <ul class="text-sm text-stone-600 space-y-2 font-light">
+                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-primary"></div> Desintoxicación de dopamina</li>
+                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-primary"></div> Claridad estratégica anual</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TRAYECTORIA / AUTORIDAD CLÍNICA -->
+        <section id="experiencia" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-24 bg-white rounded-[50px] shadow-sm border border-stone-100 mb-20 scroll-mt-20">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-medium text-brand-dark mb-4">Ciencia, experiencia y empatía.</h2>
+                <p class="text-stone-500 font-light max-w-xl mx-auto">Más de 15 años cruzando los límites entre la salud mental clínica y el rendimiento corporativo en Silicon Valley.</p>
+            </div>
+
+            <div class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-px before:bg-brand-accent/60 pl-4 md:pl-0">
+
+                <!-- Experiencia 1 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-brand-primary text-white shadow-sm shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <i data-lucide="sun" class="w-4 h-4"></i>
+                    </div>
+                    <div class="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] pl-4 md:pl-0 md:group-odd:pr-8 md:group-even:pl-8 text-left md:group-odd:text-right">
+                        <h3 class="font-serif font-bold text-brand-dark text-xl">Founder & Head Coach</h3>
+                        <div class="text-[11px] font-bold tracking-widest text-brand-primary uppercase mt-1 mb-2">2020 - Actualidad</div>
+                        <h4 class="text-sm font-bold text-stone-800 mb-2">Rostova Performance Institute</h4>
+                        <p class="text-sm text-stone-500 font-light leading-relaxed">
+                            Fundación de mi práctica privada exclusiva. Diseño de programas integrales (biología, psicología y liderazgo) para founders de startups en hiper-crecimiento y ejecutivos del Fortune 500.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Experiencia 2 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-stone-800 text-white shadow-sm shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <i data-lucide="building" class="w-4 h-4"></i>
+                    </div>
+                    <div class="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] pl-4 md:pl-0 md:group-odd:pr-8 md:group-even:pl-8 text-left md:group-odd:text-right">
+                        <h3 class="font-serif font-bold text-brand-dark text-xl">Directora de Bienestar Corporativo</h3>
+                        <div class="text-[11px] font-bold tracking-widest text-stone-400 uppercase mt-1 mb-2">2016 - 2020</div>
+                        <h4 class="text-sm font-bold text-stone-800 mb-2">TechGiant Inc. (Silicon Valley)</h4>
+                        <p class="text-sm text-stone-500 font-light leading-relaxed">
+                            Diseño y dirección de la estrategia de salud mental para más de 5,000 empleados. Implementación de protocolos de prevención de burnout para los equipos de ingeniería y la junta directiva (C-Suite).
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Experiencia 3 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-stone-400 text-white shadow-sm shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <i data-lucide="activity" class="w-4 h-4"></i>
+                    </div>
+                    <div class="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] pl-4 md:pl-0 md:group-odd:pr-8 md:group-even:pl-8 text-left md:group-odd:text-right">
+                        <h3 class="font-serif font-bold text-brand-dark text-xl">Psicóloga Clínica (Burnout)</h3>
+                        <div class="text-[11px] font-bold tracking-widest text-stone-400 uppercase mt-1 mb-2">2012 - 2016</div>
+                        <h4 class="text-sm font-bold text-stone-800 mb-2">Clínica Mayo (Sede Ficticia)</h4>
+                        <p class="text-sm text-stone-500 font-light leading-relaxed">
+                            Tratamiento clínico presencial de pacientes con estrés crónico, fatiga suprarrenal y ansiedad generalizada severa debido a altas cargas de responsabilidad corporativa y médica.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Experiencia 4 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-stone-300 text-stone-700 shadow-sm shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <i data-lucide="microscope" class="w-4 h-4"></i>
+                    </div>
+                    <div class="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] pl-4 md:pl-0 md:group-odd:pr-8 md:group-even:pl-8 text-left md:group-odd:text-right">
+                        <h3 class="font-serif font-bold text-brand-dark text-xl">Investigadora en Neurociencia</h3>
+                        <div class="text-[11px] font-bold tracking-widest text-stone-400 uppercase mt-1 mb-2">2009 - 2012</div>
+                        <h4 class="text-sm font-bold text-stone-800 mb-2">Universidad de Stanford (Postdoctorado)</h4>
+                        <p class="text-sm text-stone-500 font-light leading-relaxed">
+                            Investigación aplicada sobre neuroplasticidad y cómo las prácticas de meditación profunda (Mindfulness) alteran estructuralmente la amígdala para reducir la reactividad al estrés.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Experiencia 5 -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-stone-200 text-stone-600 shadow-sm shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                        <i data-lucide="medal" class="w-4 h-4"></i>
+                    </div>
+                    <div class="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] pl-4 md:pl-0 md:group-odd:pr-8 md:group-even:pl-8 text-left md:group-odd:text-right">
+                        <h3 class="font-serif font-bold text-brand-dark text-xl">Consultora de Rendimiento</h3>
+                        <div class="text-[11px] font-bold tracking-widest text-stone-400 uppercase mt-1 mb-2">2006 - 2009</div>
+                        <h4 class="text-sm font-bold text-stone-800 mb-2">Comité Olímpico (Atletas de Élite)</h4>
+                        <p class="text-sm text-stone-500 font-light leading-relaxed">
+                            Desarrollo de resiliencia psicológica y visualización enfocada para atletas de alto rendimiento preparándose para escenarios de competencia mundial bajo presión absoluta.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA FINAL (Orgánico / Calmado) -->
+        <section id="contacto" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+            <div class="bg-brand-primary p-12 md:p-20 text-center text-white rounded-[50px] shadow-2xl relative overflow-hidden">
+                <!-- Círculos suaves de fondo -->
+                <div class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
+                <div class="absolute bottom-0 left-0 w-64 h-64 bg-emerald-900/50 rounded-full blur-3xl -ml-20 -mb-20"></div>
+                
+                <h2 class="font-serif text-3xl md:text-5xl font-medium mb-6 relative z-10 leading-tight">No puedes liderar a otros si estás en guerra contigo mismo.</h2>
+                <p class="text-emerald-100 text-lg mb-10 max-w-xl mx-auto relative z-10 font-light">
+                    Solicita una llamada exploratoria confidencial de 20 minutos. Evaluaremos tu nivel actual de carga alostática (estrés acumulado) y determinaremos si mi metodología es el paso correcto para ti.
+                </p>
+                
+                <a href="mailto:consultas@elenarostova.com?subject=Solicitud de Evaluación Confidencial" class="inline-flex items-center gap-3 bg-white text-brand-primary hover:bg-brand-accent font-bold uppercase tracking-widest text-xs py-5 px-10 rounded-full transition-all shadow-xl hover:shadow-white/20 relative z-10 hover:-translate-y-1">
+                    Solicitar Evaluación Inicial
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12 border-t border-brand-accent/50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-stone-400 text-sm text-center md:text-left font-light">
+                <span class="font-serif font-bold text-lg text-brand-dark mr-4 uppercase">Elena Rostova</span> 
+                © 2024 Rostova Institute. Psicología & Alto Rendimiento.
+            </div>
+            <div class="flex gap-6">
+                <a href="#" class="text-stone-400 hover:text-brand-primary transition-colors text-xs font-bold uppercase tracking-widest">LinkedIn</a>
+                <a href="#" class="text-stone-400 hover:text-brand-primary transition-colors text-xs font-bold uppercase tracking-widest">Aviso de Privacidad</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
